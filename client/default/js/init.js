@@ -1,5 +1,4 @@
-
-var CLIENT_TOKEN = "REPLACE_ME"; //replace it with the correct auth token value of the store item
+var CLIENT_TOKEN = "5JuWmsCFWe2cIXxIxQBUDpcx"; //replace it with the correct auth token value of the store item
 
 /**
 * Bind functions to various events when the app is loaded
