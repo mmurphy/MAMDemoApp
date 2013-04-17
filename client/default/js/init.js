@@ -59,7 +59,7 @@ var update_data_info = function(){
 **/
 var doGoogleLogin = function(){
   var policyId = "MyGooglePolicy";
-  $fh.auth({"policyId":policyId, "clientToken": CLIENT_TOKEN, "endRedirectUrl": window.location.href, params: {}}, function(res){
+  $fh.auth({"policyId":policyId, "clientToken": CLIENT_TOKEN, "authCallback": "authLoginCallback", "endRedirectUrl": window.location.href, params: {}}, function(res){
     handleLoginSuccess(res);
   }, function(err){
     handleLoginFailure(err);
