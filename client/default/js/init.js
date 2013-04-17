@@ -80,6 +80,17 @@ var doFeedhenryLogin = function(){
   })
 }
 
+
+
+function authLoginCallback(err, res) {
+   if (!err) {
+     // Authentication successful - store sessionToken in variable
+     handleLoginSuccess(res);
+   } else {
+     handleLoginFailure(res);
+   }
+}
+
 /**
 * Successfully logged in, show the response details and "Edit data" button
 **/
