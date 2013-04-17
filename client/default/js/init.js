@@ -87,7 +87,7 @@ function authLoginCallback(err, res) {
      // Authentication successful - store sessionToken in variable
      handleLoginSuccess(res);
    } else {
-     handleLoginFailure(res);
+     handleLoginFailure(err);
    }
 }
 
