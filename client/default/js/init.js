@@ -56,10 +56,11 @@ var update_data_info = function(){
 
 /**
 * Authenticate the user using Google account
+* , "authCallback": "authLoginCallback", "endRedirectUrl": window.location.href
 **/
 var doGoogleLogin = function(){
   var policyId = "MyGooglePolicy";
-  $fh.auth({"policyId":policyId, "clientToken": CLIENT_TOKEN, "authCallback": "authLoginCallback", "endRedirectUrl": window.location.href, params: {}}, function(res){
+  $fh.auth({"policyId":policyId, "clientToken": CLIENT_TOKEN, params: {}}, function(res){
     handleLoginSuccess(res);
   }, function(err){
     handleLoginFailure(err);
@@ -83,6 +84,7 @@ var doFeedhenryLogin = function(){
 
 
 function authLoginCallback(err, res) {
+  alert("something went wrong");
    if (!err) {
      // Authentication successful - store sessionToken in variable
      handleLoginSuccess(res);
